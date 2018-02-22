@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="GUITravel.Hotel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUITravel"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" Width="313.954">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0" Margin="0,10,-18,10">
+            <Button Name="neu">Neu</Button>
+            <Button x:Name="btnSave" IsDefault="True" TabIndex="1" Click="btnSave_Click">Speichern</Button>
+            <Button TabIndex="2">Löschen</Button>
+            <Button IsCancel="True" TabIndex="3">Abbrechen</Button>
+            <Button TabIndex="4">Suchen</Button>
+            <TextBox Margin="5,0,0,0" TabIndex="5" Width="70"></TextBox>
+        </WrapPanel>
+        <StackPanel Grid.Row="1">
+            <WrapPanel>
+                <Label Width="90">Name</Label>
+                <TextBox TabIndex="6" Width="215"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Width="90">Ort</Label>
+                <TextBox TabIndex="7" Width="215"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Width="90">Land</Label>
+                <TextBox TabIndex="8" Width="215"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Width="90">Sterne</Label>
+                <TextBox TabIndex="9" Width="215"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Width="90">Manager</Label>
+                <TextBox TabIndex="10" Width="215"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Width="90" >Anzahl Zimmer</Label>
+                <TextBox TabIndex="11" Width="215"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Width="90">Tagespreis</Label>
+                <TextBox TabIndex="12" Width="215"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Width="90">Telefon</Label>
+                <TextBox TabIndex="13" Width="215"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Width="90">Email</Label>
+                <TextBox TabIndex="14" Width="215"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Width="90">Web</Label>
+                <TextBox TabIndex="15" Width="215"></TextBox>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
