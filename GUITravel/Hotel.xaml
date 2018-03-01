@@ -22,43 +22,43 @@
         <StackPanel Grid.Row="1">
             <WrapPanel>
                 <Label Width="90">Name</Label>
-                <TextBox TabIndex="6" Width="215"></TextBox>
+                <TextBox x:Name="TBName" TabIndex="6" Width="215" TextChanged="TBName_TextChanged"></TextBox>
             </WrapPanel>
             <WrapPanel>
                 <Label Width="90">Ort</Label>
-                <TextBox TabIndex="7" Width="215"></TextBox>
+                <TextBox x:Name="TBOrt" TabIndex="7" Width="215" TextChanged="TBOrt_TextChanged"></TextBox>
             </WrapPanel>
             <WrapPanel>
                 <Label Width="90">Land</Label>
-                <TextBox TabIndex="8" Width="215"></TextBox>
+                <ComboBox x:Name="TBLand" TabIndex="8" Width="215" ></ComboBox>
             </WrapPanel>
             <WrapPanel>
                 <Label Width="90">Sterne</Label>
-                <TextBox TabIndex="9" Width="215"></TextBox>
+                <TextBox x:Name="TBSterne" TabIndex="9" Width="215" TextChanged="TBSterne_TextChanged"></TextBox>
             </WrapPanel>
             <WrapPanel>
                 <Label Width="90">Manager</Label>
-                <TextBox TabIndex="10" Width="215"></TextBox>
+                <TextBox x:Name="TBManager" TabIndex="10" Width="215" TextChanged="TBManager_TextChanged"></TextBox>
             </WrapPanel>
             <WrapPanel>
                 <Label Width="90" >Anzahl Zimmer</Label>
-                <TextBox TabIndex="11" Width="215"></TextBox>
+                <TextBox x:Name="TBAnzahlZimmer" TabIndex="11" Width="215" TextChanged="TBAnzahlZimmer_TextChanged"></TextBox>
             </WrapPanel>
             <WrapPanel>
                 <Label Width="90">Tagespreis</Label>
-                <TextBox TabIndex="12" Width="215"></TextBox>
+                <TextBox x:Name="TBTagespreis" TabIndex="12" Width="215" TextChanged="TBTagespreis_TextChanged"></TextBox>
             </WrapPanel>
             <WrapPanel>
                 <Label Width="90">Telefon</Label>
-                <TextBox TabIndex="13" Width="215"></TextBox>
+                <TextBox x:Name="TBTelefon" TabIndex="13" Width="215" TextChanged="TBTelefon_TextChanged"></TextBox>
             </WrapPanel>
             <WrapPanel>
                 <Label Width="90">Email</Label>
-                <TextBox TabIndex="14" Width="215"></TextBox>
+                <local:TextBoxWithSelection Height="26" Width="215" TabIndex="14"/>
             </WrapPanel>
             <WrapPanel>
                 <Label Width="90">Web</Label>
-                <TextBox TabIndex="15" Width="215"></TextBox>
+                <TextBox x:Name="TBWeb" TabIndex="15" Width="215" TextChanged="TBWeb_TextChanged"></TextBox>
             </WrapPanel>
         </StackPanel>
     </Grid>

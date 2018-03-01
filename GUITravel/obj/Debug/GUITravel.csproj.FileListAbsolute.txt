@@ -1,7 +1,6 @@
 C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\bin\Debug\GUITravel.exe.config
 C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\bin\Debug\GUITravel.exe
 C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\bin\Debug\GUITravel.pdb
-C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\GUITravel.csprojResolveAssemblyReference.cache
 C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\MainWindow.g.cs
 C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\App.g.cs
 C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\GUITravel_MarkupCompile.cache
@@ -17,3 +16,7 @@ C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\D
 C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\Hotel.baml
 C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\Kunde.g.cs
 C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\Kunde.baml
+C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\TextBoxWithSelection.g.cs
+C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\TextBoxWithSelection.baml
+C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\GUITravel.csprojResolveAssemblyReference.cache
+C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\GeneratedInternalTypeHelper.g.cs
