@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -39,11 +40,6 @@ namespace GUITravel
         private void TBWithSelection_GotMouseCapture(object sender, MouseEventArgs e)
         {
             SelecteContent();
-        }
-
-        private void TBWithSelection_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

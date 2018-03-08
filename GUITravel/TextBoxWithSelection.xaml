@@ -12,7 +12,7 @@
                    Width="215"
                    GotKeyboardFocus="TBWithSelection_GotKeyboardFocus"
                    GotMouseCapture="TBWithSelection_GotMouseCapture" Height="26"
-                 TextChanged="TBWithSelection_TextChanged"
+                 
                  />
     </Grid>
 </UserControl>

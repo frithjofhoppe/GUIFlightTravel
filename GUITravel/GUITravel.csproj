@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EValidation.cs" />
+    <Compile Include="EWorkingStatus.cs" />
+    <Compile Include="RegexLib.cs" />
     <Compile Include="TextBoxWithSelection.xaml.cs">
       <DependentUpon>TextBoxWithSelection.xaml</DependentUpon>
     </Compile>

@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUITravel", "GUITravel\GUITravel.csproj", "{67AD0B09-8B2D-4F0A-91D7-FA28401325A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "..\..\..\..\Desktop\M120\AB120_02\AB120_02\AB120_02\AB120_02\Infrastructure.csproj", "{639B185F-0D76-4D8C-8529-1667562226A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{67AD0B09-8B2D-4F0A-91D7-FA28401325A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67AD0B09-8B2D-4F0A-91D7-FA28401325A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67AD0B09-8B2D-4F0A-91D7-FA28401325A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{639B185F-0D76-4D8C-8529-1667562226A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{639B185F-0D76-4D8C-8529-1667562226A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{639B185F-0D76-4D8C-8529-1667562226A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{639B185F-0D76-4D8C-8529-1667562226A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

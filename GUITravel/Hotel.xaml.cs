@@ -21,141 +21,127 @@ namespace GUITravel
     /// </summary>
     public partial class Hotel : UserControl
     {
+        bool areAllFieldsValid = false;
+        int validFiels {
+            set
+            {
+                areFieldsValid();
+            }
+
+            get
+            {
+                return validFiels;
+            }
+        }
+
+        private EWorkingStatus workingStatus;
+
         public Hotel()
         {
             InitializeComponent();
         }
 
-        private bool IsNameValid(String name)
+        private void SelecteContent(TextBox txt)
         {
-            if(Regex.IsMatch(name, @"^[a-zA-Zäöü]{2,}$"))
-            {
-                return true;
-            }
-            return false;
+            txt.SelectionStart = 0;
+            txt.SelectionLength = txt.Text.Length;
         }
 
-        private bool IsLocationValid(String name)
+        private void TBWithSelection_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            if(Regex.IsMatch(name, @"^[a-zA-Zäöü\-]{3,}$"))
-            {
-                return true;
-            }
-            return false;
+            SelecteContent(((TextBox)sender));
         }
 
-        private bool AreStarsValid(String name)
+        private void TBWithSelection_GotMouseCapture(object sender, MouseEventArgs e)
         {
-            if (Regex.IsMatch(name, @"^[1-7]$"))
-            {
-                return true;
-            }
-            return false;
+            SelecteContent(((TextBox)sender));
         }
-
-        private bool IsManageValid(String name)
-        {
-            if (Regex.IsMatch(name, @"^[a-zA-Zäöü]{2,}\s[a-zA-Zäöü]{2,}$"))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private bool IsCountOfRoomsValid(String name)
-        {
-            if (Regex.IsMatch(name, @"^[2-1000]$"))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private bool IsDailyPriceValid(String text)
-        {
-            if(Regex.IsMatch(text, @"^\d{1,}\.+\d*$"))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private bool IsTelephonenumberValid(String text)
-        {
-            if(Regex.IsMatch(text, @"\d{3}\d{3}\d{4}$"))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private bool IsURLValid(String text)
-        {
-            if (Regex.IsMatch(text, @"http[s]+\:\/\/[a-zA-Zäöü]{1,}\.[a-zA-Z]{2,3}"))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private void RegexMatcher(Func<string, bool> matcher, String content, Control item)
-        {
-            if (matcher(content))
-            {
-                item.Background = Brushes.Green;
-            }
-            else
-            {
-                item.Background = Brushes.Red;
-            }
-        }
-
-       
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             
         }
 
-
         private void TBName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            RegexMatcher(IsNameValid, TBName.Text, TBName);
+            RegexLib.RegexMatcher(RegexLib.IsNameValid, TBName.Text, TBName);
         }
 
         private void TBOrt_TextChanged(object sender, TextChangedEventArgs e)
         {
-            RegexMatcher(IsLocationValid, TBOrt.Text, TBOrt);
+            RegexLib.RegexMatcher(RegexLib.IsLocationValid, TBOrt.Text, TBOrt);
         }
 
         private void TBSterne_TextChanged(object sender, TextChangedEventArgs e)
         {
-            RegexMatcher(AreStarsValid, TBSterne.Text, TBSterne);
+            RegexLib.RegexMatcher(RegexLib.AreStarsValid, TBSterne.Text, TBSterne);
         }
 
         private void TBManager_TextChanged(object sender, TextChangedEventArgs e)
         {
-            RegexMatcher(IsManageValid, TBManager.Text, TBManager);
+            RegexLib.RegexMatcher(RegexLib.IsManageValid, TBManager.Text, TBManager);
         }
 
         private void TBAnzahlZimmer_TextChanged(object sender, TextChangedEventArgs e)
         {
-            RegexMatcher(IsCountOfRoomsValid, TBAnzahlZimmer.Text, TBAnzahlZimmer);
+            RegexLib.RegexMatcher(RegexLib.IsCountOfRoomsValid, TBAnzahlZimmer.Text, TBAnzahlZimmer);
         }
 
         private void TBTagespreis_TextChanged(object sender, TextChangedEventArgs e)
         {
-            RegexMatcher(IsDailyPriceValid, TBTagespreis.Text, TBTagespreis);
+            RegexLib.RegexMatcher(RegexLib.IsDailyPriceValid, TBTagespreis.Text, TBTagespreis);
         }
 
         private void TBTelefon_TextChanged(object sender, TextChangedEventArgs e)
         {
-            RegexMatcher(IsTelephonenumberValid, TBTelefon.Text, TBTelefon);
+            RegexLib.RegexMatcher(RegexLib.IsTelephonenumberValid, TBTelefon.Text, TBTelefon);
         }
 
         private void TBWeb_TextChanged(object sender, TextChangedEventArgs e)
         {
+            RegexLib.RegexMatcher(RegexLib.IsURLValid, TBWeb.Text, TBWeb);
+        }
 
+        private void areFieldsValid()
+        {
+            if(RegexLib.RegexMatcher(RegexLib.IsNameValid, TBName.Text, TBName) &&
+               RegexLib.RegexMatcher(RegexLib.IsLocationValid, TBOrt.Text, TBOrt) &&
+               RegexLib.RegexMatcher(RegexLib.AreStarsValid, TBSterne.Text, TBSterne) &&
+               RegexLib.RegexMatcher(RegexLib.IsManageValid, TBManager.Text, TBManager) &&
+               RegexLib.RegexMatcher(RegexLib.IsCountOfRoomsValid, TBAnzahlZimmer.Text, TBAnzahlZimmer) &&
+               RegexLib.RegexMatcher(RegexLib.IsDailyPriceValid, TBTagespreis.Text, TBTagespreis) &&
+               RegexLib.RegexMatcher(RegexLib.IsTelephonenumberValid, TBTelefon.Text, TBTelefon) &&
+               RegexLib.RegexMatcher(RegexLib.IsURLValid, TBWeb.Text, TBWeb))
+            {
+                areAllFieldsValid = true;
+            }
+            else
+            {
+                areAllFieldsValid = false;
+            }
+        }
+
+        private void clearAllFiels()
+        {
+            TBAnzahlZimmer.Clear();
+            TBEmail.Clear();
+            TBManager.Clear();
+            TBName.Clear();
+            TBOrt.Clear();
+            TBSterne.Clear();
+            TBTagespreis.Clear();
+            TBTelefon.Clear();
+            TBWeb.Clear();
+        }
+        private void neu_Click(object sender, RoutedEventArgs e)
+        {
+            workingStatus = EWorkingStatus.CREATE;
+            clearAllFiels();
+        }
+
+        private void TBEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            RegexLib.RegexMatcher(RegexLib.IsEmailValid, TBEmail.Text, TBEmail);
         }
     }
 }
