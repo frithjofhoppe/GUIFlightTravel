@@ -15,7 +15,7 @@
             <Button x:Name="btnKunde" Click="btnKunde_Click">Kunden</Button>
             <Button>Reisen</Button>
             <Button x:Name="btnHotel" Click="btnHotel_Click">Hotels</Button>
-            <Button>Listen</Button>
+            <Button x:Name="btnList" Click="btnList_Click">Listen</Button>
             <Button>Einstellungen</Button>
         </StackPanel>
         <Grid Grid.Column="1" Name="showPlace" HorizontalAlignment="Left">

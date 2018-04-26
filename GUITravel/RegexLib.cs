@@ -23,7 +23,7 @@ namespace GUITravel
 
         public static bool IsNameValid(String name)
         {
-            if (Regex.IsMatch(name, @"^[a-zA-Zäöü]{2,}$"))
+            if (Regex.IsMatch(name, @"^[a-zA-Zäöü]{2,}\s?[a-zA-Zäöü]*$"))
             {
                 return true;
             }
@@ -59,7 +59,7 @@ namespace GUITravel
 
         public static bool IsCountOfRoomsValid(String name)
         {
-            if (Regex.IsMatch(name, @"^[1-9]+$"))
+            if (Regex.IsMatch(name, @"^[0-9]+$"))
             {
                 if (Int32.Parse(name.Trim()) > 2)
                 {
@@ -90,23 +90,31 @@ namespace GUITravel
 
         public static bool IsURLValid(String text)
         {
-            if (Regex.IsMatch(text, @"http[s]+\:\/\/www+[a-zA-Zäöü]{1,}\.[a-zA-Z]{2,3}"))
-            {
-                return true;
-            }
-            return false;
+            //if (Regex.IsMatch(text, @"http[s]+\:\/\/www+[a-zA-Zäöü]{1,}\.[a-zA-Z]{2,3}"))
+            //{
+            //    return true;
+            //}
+            //return false;
+            return true;
         }
 
         public static bool RegexMatcher(Func<string, bool> matcher, String content, Control item)
         {
-            if (matcher(content))
+            if (content.Trim().Length != 0)
             {
-                item.Background = Brushes.Green;
-                return true;
+                if (matcher(content))
+                {
+                    item.Background = Brushes.Green;
+                    return true;
+                }
+                else
+                {
+                    item.Background = Brushes.Red;
+                }
             }
             else
             {
-                item.Background = Brushes.Red;
+                item.Background = Brushes.White;
             }
             return false;
         }

@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="GUITravel.HotelList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUITravel"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid x:Name="ListGrid" >
+        <DataGrid MouseDoubleClick="HotelListGrid_MouseDoubleClick" x:Name="HotelListGrid" HorizontalAlignment="Left" Height="279" VerticalAlignment="Top" Width="290" Margin="0,21,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Name}" Header="Name" Width="*"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Ort}" Header="Ort" Width="*"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding Sterne}" Header="Sterne" Width="*"/>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding TagesPreis}" Header="TagesPreis" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

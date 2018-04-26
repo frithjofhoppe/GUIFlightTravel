@@ -8,6 +8,6 @@ namespace GUITravel
 {
     public enum EWorkingStatus
     {
-        CREATE, MODIFY, SEARCH, DELETE
+        CREATE, MODIFY, DELETE, CANCEL
     }
 }

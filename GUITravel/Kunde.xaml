@@ -12,7 +12,16 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <WrapPanel Grid.Row="0" Margin="0,10,-18,10">
-            <Button TabIndex="1" Name="neu">Neu</Button>
+            <Button TabIndex="1" Name="neu" Content="Neu">
+                <Button.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold">Leert all</TextBlock>
+                            <TextBlock>Submits the request to the server.</TextBlock>
+                        </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
             <Button IsDefault="True" TabIndex="2">Speichern</Button>
             <Button TabIndex="3">Löschen</Button>
             <Button IsCancel="True" TabIndex="4">Abbrechen</Button>

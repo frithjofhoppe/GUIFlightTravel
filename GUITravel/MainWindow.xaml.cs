@@ -26,6 +26,7 @@ namespace GUITravel
             this.Title = "Travel";
         }
 
+
         private void btnHotel_Click(object sender, RoutedEventArgs e)
         {
             this.Title = "Hotel";
@@ -38,6 +39,13 @@ namespace GUITravel
             this.Title = "Kunde";
             this.showPlace.Children.Clear();
             this.showPlace.Children.Add(new Kunde());
+        }
+
+        private void btnList_Click(object sender, RoutedEventArgs e)
+        {
+            this.Title = "List";
+            this.showPlace.Children.Clear();
+            this.showPlace.Children.Add(new HotelList());
         }
     }
 }

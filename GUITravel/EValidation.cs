@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace GUITravel
 {
-    public class EValidation
+    public enum EValidation
     {
-        public enum ContentStatus { VALID, INVALID }
+        VALID, INVALID 
     }
 }
