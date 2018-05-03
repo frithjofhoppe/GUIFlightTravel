@@ -45,7 +45,7 @@ namespace GUITravel
         {
             this.Title = "List";
             this.showPlace.Children.Clear();
-            this.showPlace.Children.Add(new HotelList());
+            this.showPlace.Children.Add(new HotelList(this));
         }
     }
 }

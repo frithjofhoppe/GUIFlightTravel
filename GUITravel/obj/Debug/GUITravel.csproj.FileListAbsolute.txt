@@ -28,3 +28,4 @@ C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\bin\D
 C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\HotelList.g.cs
 C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\HotelList.baml
+C:\Users\vmadmin\Documents\Visual Studio 2017\Projects\GUITravel\GUITravel\obj\Debug\GUITravel.csproj.CopyComplete

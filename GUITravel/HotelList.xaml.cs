@@ -22,8 +22,9 @@ namespace GUITravel
     {
 
         private UIElementCollection childrens;
+        private MainWindow parent;
         
-        public HotelList()
+        public HotelList(MainWindow parent)
         {
             InitializeComponent();
             HotelListGrid.CanUserAddRows = false;
@@ -32,6 +33,7 @@ namespace GUITravel
             HotelListGrid.SelectionMode = DataGridSelectionMode.Single;
             HotelListGrid.AutoGenerateColumns = false;
             HotelListGrid.ItemsSource = Infrastructure.Hotel.Lesen_Alle();
+            this.parent = parent;
         }
 
         private void HotelListGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -39,7 +41,9 @@ namespace GUITravel
             Infrastructure.DB.Hotel selectedHotel = ((Infrastructure.DB.Hotel)((DataGrid)sender).SelectedItem);
             this.childrens = ListGrid.Children;
             ListGrid.Children.Clear();
-            ListGrid.Children.Add(new Hotel(selectedHotel));
+            ListGrid.Children.Add(new Hotel(selectedHotel, parent));
         }
+
+       
     }
 }

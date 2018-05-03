@@ -22,7 +22,7 @@
         <StackPanel Grid.Row="1">
             <WrapPanel>
                 <Label Width="90">Flagge</Label>
-                <Image x:Name="IMGLand"/>
+                <Image x:Name="IMGLand" Width="30" Height="30"/>
             </WrapPanel>
             <WrapPanel>
                 <Label Width="90">Name</Label>

@@ -24,10 +24,12 @@ namespace GUITravel
     public partial class Hotel : UserControl
     {
         bool areAllFieldsValid = false;
+        bool hasParent = false;
 
         private EWorkingStatus workingStatus;
         private EValidation validateionState;
         private Infrastructure.DB.Hotel currentHotel;
+        private MainWindow parent;
 
 
 
@@ -40,7 +42,7 @@ namespace GUITravel
             TBLand.SelectedValuePath = "LandID";
         }
 
-        public Hotel(Infrastructure.DB.Hotel hotel)
+        public Hotel(Infrastructure.DB.Hotel hotel, MainWindow parent)
         {
             InitializeComponent();
             TBLand.ItemsSource = Infrastructure.Land.Lesen_Alle();
@@ -49,6 +51,9 @@ namespace GUITravel
             currentHotel = hotel;
             LoadEntity(hotel);
             workingStatus = EWorkingStatus.MODIFY;
+            this.parent = parent;
+            this.hasParent = true;
+            this.parent.Title = hotel.Name;
         }
 
         private void SelecteContent(TextBox txt)
@@ -226,9 +231,18 @@ namespace GUITravel
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-            workingStatus = EWorkingStatus.CANCEL;
-            clearAllFiels();
-            MessageBox.Show("Der Vorgang wurde abgebrochen", "Abbrechen", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (hasParent)
+            {
+                this.parent.Title = "List";
+                this.parent.showPlace.Children.Clear();
+                this.parent.showPlace.Children.Add(new HotelList(parent));
+            }
+            else
+            {
+                workingStatus = EWorkingStatus.CANCEL;
+                clearAllFiels();
+                MessageBox.Show("Der Vorgang wurde abgebrochen", "Abbrechen", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -249,7 +263,7 @@ namespace GUITravel
             if(this.currentHotel.HotelID > 0)
             {
                 Land land = Infrastructure.Land.Lesen_LandID(hotel.Land);
-                //IMGLand = Infrastructure.Land.byteArrayToImage(land.Flagge)
+                IMGLand.Source = Infrastructure.Land.byteArrayToImage(land.Flagge);
                 TBName.Text = hotel.Name;
                 TBManager.Text = hotel.Manager;
                 TBOrt.Text = hotel.Ort;

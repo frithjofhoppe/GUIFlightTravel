@@ -9,6 +9,7 @@
     <Grid x:Name="ListGrid" >
         <DataGrid MouseDoubleClick="HotelListGrid_MouseDoubleClick" x:Name="HotelListGrid" HorizontalAlignment="Left" Height="279" VerticalAlignment="Top" Width="290" Margin="0,21,0,0">
             <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Binding="{Binding HotelID}" Header="Name" Width="*"/>
                 <DataGridTextColumn IsReadOnly="True" Binding="{Binding Name}" Header="Name" Width="*"/>
                 <DataGridTextColumn IsReadOnly="True" Binding="{Binding Ort}" Header="Ort" Width="*"/>
                 <DataGridTextColumn IsReadOnly="True" Binding="{Binding Sterne}" Header="Sterne" Width="*"/>
